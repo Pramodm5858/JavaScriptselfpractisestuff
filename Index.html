@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Style.css">
+    <script type="text/javascript" src="Script.js"></script>
+</head>
+
+<body>
+    <h1>JS placement in Script in < head>
+            < / head> & < body>
+                    < / body>
+    </h1>
+
+    <h2>JS Variable Scope :- have only two scopes 1-> Global Variables 2-> Local Variables </h2>
+    <p>1-> Global Variable:- It has Global scope , which means it is not defined locally(i.e. with in any function or
+        block of code) can can be access anywhere in your javaScript code</p>
+    <p>2->Local Variable:- A local varible will be visible only within function where it is defined. Function parameters
+        are always local to that function. </p>
+
+    <script type="text/javascript">
+        var myVar = "global"   //Declare a global Varible
+
+        function checkScope() {
+            var myVar = "local";    //Declare a local varible
+            document.write(myVar)
+        }
+        checkScope()
+    </script>
+
+    <h1>Data Types</h1>
+    <h5>1-> Primitive Date Types</h5>
+    <h5>2-> Reference Data Types</h5>
+    <p>Numbers, Strings, Boolean, Null, undefined</p>
+    <p>Objects Arrays Functions</p>
+
+    <h1>javascript Operators</h1>
+    <p>1->Arithmetic Operators:- + - / * % ++ -- 2->Assignment Operators:- = += -= *= /= %= 3-> Comparison Operators:-
+        == === != !== > <>= <= 4->Logical Operators:- && || ! </p>
+
+    <h1>JS O/P Statements</h1>
+    <p>1->innerHTML 2->document.write() 3->window.alert() 4->console.log() </p>
+    <p>
+        < h3 id="myh">Hello Learners < / h3>
+                var str = "Welcome to Edureka";
+                const Element = document.getElementById("myh")
+                Element.innerHTML = str
+    </p>
+    <p>
+        < h3 id="myh">Hello Learners < / h3>
+                var str = "Welcome to Edureka";
+                document.write(str)
+    </p>
+    <p>
+        < h3 id="myh">Hello Learners < / h3>
+                var str = "Welcome to Edureka";
+                window.alert(str)
+    </p>
+    <p>
+        < h3 id="myh">Hello Learners < / h3>
+                var str = "Welcome to Edureka";
+                console.log(str)
+    </p>
+
+    <h1>JS I/p Statements</h1>
+    <p>1->window.prompt() 2->window.confirm()</p>
+
+    <p>1->
+        < h3 id="myh">Hello Learners< / h3>
+                var x = window.prompt();
+                const Element = document.getElementById("myh")
+                Element.innerHTML = str
+    </p>
+
+    <p>2->
+        < p> Choose your Opition< / p>
+                < h3 id="myh">
+                    < / h3>
+                        <!-- < script> -->
+                        const Element = document.getElementById("myh")
+                        if (x == true) {
+                        Element.innerHTML = "Welcome to Edureka";
+                        } else {
+                        Element.innerHTML = "Please come back later";
+                        }
+                        <!-- < /script> -->
+    </p>
+
+
+    <h1>JS Array :- The Array objects lets you store multiple values in a single Variable .It stores a
+        fixed-sizesequential collection of elements of the same type. </h1>
+    <p> var countries = ['India', 'England', 'Australia']; var year = [1995, 1997, 2007] </p>
+
+
+    <h1>JS Array Operations</h1>
+    <p>1->Map method 2->Filter method 3-> Pop method 4-> Find method 5-> Concat method 6-> Slice method 7-> Push method
+        8-> Sort method </p>
+
+    <p>
+        <!-- < script> Filter Method-->
+        var age = [12, 20, 25, 30]
+        function checkEligiblity(age){
+        return age>=18
+        }
+        var selected = age.filter(checkEligiblity)
+        console.log("Ages of selected canditates are " +selected)
+        <!-- < /script> -->
+    </p>
+
+    <p>
+        <!-- < script> Map Method-->
+        var age = [12, 20, 25, 30]
+        function myFunc(age){
+        return (age-4)
+        }
+        var selected = age.map(myFunc)
+        console.log("Ages of selected canditates are " +selected)
+        <!-- < /script> -->
+    </p>
+
+    <p>
+        <!-- < script> Concat Method-->
+        var FrontEnd = ["HTML", "CSS", "JS", "React"]
+        var BackEnd = ["Nodejs","mongodb"]
+        var technologies = FrontEnd.concat(BackEnd)
+        console.log("Element = " +technologies)
+        <!-- < /script> -->
+    </p>
+
+    <p>
+        <!-- < script> Push, unshift Method-->
+        var skills = ["HTML", "CSS", "JS", "React"]
+        var Language = ["Nodejs","mongodb"]
+
+        skills.push("Git")
+        Language.unshift("Problem solving")
+        console.log(skills) console.log(Language)
+
+        <!-- < /script> -->
+    </p>
+
+    <p>
+        <!-- < script> Pop, shift Method-->
+        var skills = ["HTML", "CSS", "JS", "React"]
+        var Language = ["Nodejs","mongodb"]
+
+        skills.pop()
+        Language.shift()
+        console.log(skills) console.log(Language)
+        <!-- < /script> -->
+    </p>
+
+    <p>
+        <!-- < script> Find Method-->
+        var data = [12, 20, 25, 30];
+        function checkEligiblity(data){
+        return data > 18
+        }
+        console.log(data.find(checkEligiblity))
+        <!-- < /script> -->
+    </p>
+
+    <p>
+        <!-- < script> Slice Method-->
+        var data = ["a","b","c","d","e"];
+        returnedLetters = letters.slice(0,3)
+        console.log(returnedLetters)
+        <!-- < /script> -->
+    </p>
+
+    <p>
+        <!-- < script> Slice Method-->
+        var data = [1, 100, 40, 6, 12, 20, 10];
+        data.sort(); //without Compare function
+        console.log(data)
+        data .sort(function (a,b){return a - b}) //By using Compare function
+        console.log(data)
+        <!-- < /script> -->
+    </p>
+
+    <h1>Looping Statements</h1>
+    <p>1->For loop2->While loop</p>
+
+    <p>
+        <!-- < script> For Loop-->
+        var count;
+        for (count=0; count < 10; count++){ document.write("Current count:" +count) } <!-- < /script> -->
+    </p>
+
+    <p>
+        <!-- < script> While Loop-->
+        var count;
+        while (count < 10 ){ document.write("Current count:" +count+ "<br/>" ) count++; } <!-- < /script> -->
+    </p>
+
+
+    <h1>Conditional Statements</h1>
+    <p>1->If Statement 2->if-else Statement</p>
+
+    <p>
+        <!-- < script> If Statement-->
+        var age=20;
+        if(age>18){
+        document.write("Qualifies fr driving")
+        }
+        <!-- < /script> -->
+    </p>
+
+    <p>
+        <!-- < script> If-else Statement-->
+        var age=15;
+        if(age>18){
+        document.write("Qualifies fr driving")
+        }else {
+        document.write("Does not Qualifies for driving")
+        }
+        <!-- < /script> -->
+    </p>
+
+
+    <h1>Conditional Statements (Switch Statement)</h1>
+
+    <p>
+        <!-- < script> Switch Statement-->
+        var x=3;
+        switch(x%2){
+        case 0:
+        document.write("Number is divisible by 2")
+        break;
+        case 1:
+        document.write("Add one to the variable")
+        break;
+        default:
+        document.write("Choose a number divisible by 2")
+        }
+        <!-- < /script> -->
+    </p>
+
+
+    <h1>JS String :- It is primitive datatype</h1>
+
+
+
+
+    <p>Other also used as 1->split method 2-> splice method 3-> join method 4-> includes method </p>
+
+</body>
+
+</html>
