@@ -240,8 +240,189 @@
     </p>
 
 
-    <h1>JS String :- It is primitive datatype</h1>
+    <h1>JS String :- It is primitive datatype.Anything inside double quotation("") or single quotation('') will be considered as string. </h1>
+    <p>var stringName = "This is string" </p>
+    <h2>The string object</h2>
+    <p>var str = new String(string)</p>
 
+    <h1>String Method</h1>
+    <p>charAt(), slice(), concat(), lastIndexOf(), match(), split(), substr(), substring()</p>
+
+    <p>
+        <!-- < script> charAt() method-->
+        var Greet= "Welcome to Edureka Internship Program";
+        console.log(Greet.charAt(4))
+        O/p=> o
+        <!-- < /script> -->
+    </p>
+
+    <p>
+        <!-- < script> concat() method-->
+        var Greet= "Welcome to Edureka ";
+        var learn = "Internship Program"
+
+        var str1 = Greet.concat(learn);  //Two ways to perform concatenation of strings
+        var str2 = Greet + learn;       //Two ways to perform concatenation of strings
+
+        console.log(str1)
+        console.log(str2)
+
+        O/p=> Welcome to Edureka Internship Program
+        O/p=> Welcome to Edureka Internship Program
+        <!-- < /script> -->
+    </p>
+
+    <p>
+        <!-- < script> spit() method-->
+        var str= "Welcome to Edureka Internship Program";
+
+        splitedstr = str.split(" ");  //Two ways to perform concatenation of strings
+
+        console.log(splitedstr)
+        console.log(str)
+
+        O/p=> ["Welcome", "to", "Edureka", "Internship", "Program"]
+        O/p=> {"Welcome to Edureka Internship Program"}
+        <!-- < /script> -->
+    </p>
+
+    <p>
+        <!-- < script> slice() method-->
+        var str= "Welcome to Edureka Internship Program";
+
+        splitedstr = str.slice(0, 7);  //Two ways to perform concatenation of strings
+
+        console.log(splitedstr)
+        console.log(str)
+
+        O/p=> Welcome
+        O/p=> Welcome to Edureka Internship Program
+        <!-- < /script> -->
+    </p>
+
+
+    <h1>Math Object</h1>
+    <p>In JS , Math object allows you to use mathematical tasks. All properties & methods of Math object can be called by using keyword "Math" as an object</p>
+    <p>syntax:- Math.propertyname  or  Math.MethodName()</p>
+
+    <p>
+        <!-- < script> Math Object 1-->
+        var x = 2.4
+
+        var ceil = Math.ceil(x)
+        var floor = Math.floor(x)
+        var sqrt = Math.sqrt(x)
+
+        console.log("ceil of " + x + " = " + ceil)
+        console.log("floor of " + x + " = " + floor)
+        console.log("squareroot of " + x + " = " + sqrt)
+
+        O/p=> ceil of 2.4 = 3
+        O/p=> floor of 2.4 = 2
+        O/p=> squareroot of 2.4 = 1.5491933384829668
+        <!-- < /script> -->
+    </p>
+
+    <p>
+        <!-- < script> Math Object 2-->
+        var radius = 10
+
+        var ceil = Math.ceil(x)
+        var floor = Math.floor(x)
+        var sqrt = Math.sqrt(x)
+
+        console.log("ceil of " + x + " = " + ceil)
+        console.log("floor of " + x + " = " + floor)
+        console.log("squareroot of " + x + " = " + sqrt)
+
+        O/p=> ceil of 2.4 = 3
+        O/p=> floor of 2.4 = 2
+        O/p=> squareroot of 2.4 = 1.5491933384829668
+        <!-- < /script> -->
+    </p>
+    1-> New Date() => var d = new Date()
+    2=>New Date(year, month, day, hours, minutes, sec, miliseconds) => var d = new Date(2018, 11, 24, 10, 33, 30, 0)
+    3=>New Date(Date string)=> var d = new Date(" October 13, 2014 11:13:00")
+    4=>New Date(miliseconds)=> var d = new Date(100000000000);
+
+    <h4>Date Methods</h4>
+    <p>Date(), getDate(), getDay(), getFullYears(), getHours(), getMilliseconds(), getMinutes(), getMonth(), getSeconds() </p>
+
+    <h1>DOM(Document Object Model)</h1>
+    <p>When a page is loaded, the web browser takes the HTML document and creates a tree like structure of the document with the help of HTML elements. This is tree like structure is known as DOM </p>
+    <p>Document -> < html > divide in left & right. In left < head >-> < title > -> Text. In Right-> body -> divide in left & right. In left < h1 > => Text. In left < p >=> Text </p>
+
+
+    <h1>Form Validation</h1>
+    <p>Form Validation occurs at the serve side to verify the details given by the user. & JS allows you to verify the data before submitting it to the server. </p>
+    <p>Some of commonly used validation tasks are :- 1-> To ensure all the required fields are fields 2-> To ensure that the user has entered a valid date 3-> To ensure that the user has entered numbers in the numeric field 4-> To ensure that the user has entered a valid email</p>
+
+    <p >  <!-- Example 1: Form Validation -->
+        <div id="root">
+            <form name="myForm" onsubmit="validate()" method="post">
+            Name: <input type="text" name="name">
+            <input type="submit" value="submit">            
+            </form>
+        </div>
+        <!-- < script> -->
+        function validate(){
+            var x = document.forms["myform"]["name"].value;
+            if( x = " "){
+                alert("Name can't be empty")
+                return false;
+            }
+            else {
+                let value = "Form Submitted successfully"
+                document.getElementById("root").innerHTML=value 
+            }
+        }
+        <!-- < /script> -->
+    </p>
+
+    <p >  <!-- Example 2: Form Validation -->
+        <div id="root">
+            <form name="myForm" onsubmit="validate()" method="post">
+            <b>Phone Number: </b> <input type="text" name="ContactNumber">
+            <input type="submit" value="submit">            
+            </form>
+        </div>
+        <!-- < script> -->
+        function validate(){
+            var x = document.forms["myform"]["ContactNumber"].value;
+            if( isNan(x) || x = ""){
+                alert("Please enter number")
+            }
+            else {
+                let value = "Successfully Submitted"
+                document.getElementById("root").innerHTML=value 
+            }
+        }
+        <!-- < /script> -->
+    </p>
+
+    <p >  <!-- Example 3: Form Validation -->
+        <div id="root">
+            <form name="myForm" onsubmit="validate()" method="post">
+            <b>Dob: </b> <input type="date" name="DOB">
+            <input type="submit" value="submit">            
+            </form>
+        </div>
+        <!-- < script> -->
+        function validate(){
+            var x = document.forms["myform"]["DOB"].value;
+            let DOB = new Date(x).getTime()
+            let Today = Date.now();
+            let milli_diff = Math.abs(today - DOB)
+            var age = (milli_diff / (1000 * 3600 * 24 * 365.25));
+            if( age < 18 ){
+                alert("Sorry you should focus on your studies")
+                return false
+            }
+            var value = "Successfully submitted"
+            document.getElementById("root").innerHTML=value 
+        }
+        <!-- < /script> -->
+    </p>
 
 
 
